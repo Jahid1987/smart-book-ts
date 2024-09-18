@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import { lusitana } from "../ui/fonts";
 
 export const metadata: Metadata = {
   title: "Smart Book Controll Panel",
@@ -13,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+      <body
+        suppressHydrationWarning={true}
+        className={`${lusitana.className} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
