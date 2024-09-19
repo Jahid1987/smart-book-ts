@@ -1,3 +1,4 @@
+import Hero from "@/components/front-end/home/Hero";
 import prisma from "@/lib/prisma-client";
 
 export default async function Home() {
@@ -5,7 +6,10 @@ export default async function Home() {
   console.log(users);
   return (
     <main className="flex flex-col gap-4">
-      <section>Hero section</section>
+      {/* Hero section */}
+      <section className="flex justify-center">
+        <Hero />
+      </section>
       <section>Key Feature section</section>
       <section>Book Categories Section</section>
       <section>Video Content Preview Section</section>

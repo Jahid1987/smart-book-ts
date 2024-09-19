@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { inter } from "../ui/fonts";
+import { inter } from "../fonts/fonts";
 import TopNav from "@/components/front-end/topnav/TopNavBar";
 import Footer from "@/components/front-end/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${inter.className} antialiased `}
+        className={`${inter.className} antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"

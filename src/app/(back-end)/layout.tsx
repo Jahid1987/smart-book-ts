@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { lusitana } from "../ui/fonts";
+import { lusitana } from "../fonts/fonts";
 
 export const metadata: Metadata = {
   title: "Smart Book Controll Panel",
