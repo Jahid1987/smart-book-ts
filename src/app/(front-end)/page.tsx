@@ -4,7 +4,7 @@ export default async function Home() {
   const users = await prisma.user.findMany();
   console.log(users);
   return (
-    <main className="flex flex-col gap-4 mt-4">
+    <main className="flex flex-col gap-4">
       <section>Hero section</section>
       <section>Key Feature section</section>
       <section>Book Categories Section</section>

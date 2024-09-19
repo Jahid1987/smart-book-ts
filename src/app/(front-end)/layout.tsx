@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased `}
       >
         <TopNav />
-        <div className="container px-1 mx-auto min-h-[calc(100vh-145px)]">
+        <div className="container px-1  pt-4 mx-auto min-h-[calc(100vh-145px)]">
           {children}
         </div>
         <Footer />
