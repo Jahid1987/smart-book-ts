@@ -2,6 +2,7 @@ import Link from "next/link";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import Profile from "./Profile";
+import ThemeToggler from "./ThemeToggler";
 
 const TopNavBar = () => {
   return (
@@ -22,7 +23,8 @@ const TopNavBar = () => {
           <DesktopMenu />
         </div>
         {/* End  */}
-        <div>
+        <div className="flex items-center gap-2">
+          <ThemeToggler />
           <Profile />
         </div>
       </div>
