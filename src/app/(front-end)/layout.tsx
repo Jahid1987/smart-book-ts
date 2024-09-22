@@ -27,7 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TopNav />
-          <div className="container px-1  pt-4 mx-auto min-h-[calc(100vh-145px)]">
+          <div className="container px-1  pt-2 mx-auto min-h-[calc(100vh-145px)]">
             {children}
           </div>
           <Footer />

@@ -5,9 +5,9 @@ export default async function Home() {
   const users = await prisma.user.findMany();
   console.log(users);
   return (
-    <main className="flex flex-col gap-4">
+    <main className="flex flex-col gap-4 md:gap-8">
       {/* Hero section */}
-      <section className="flex justify-center">
+      <section className="">
         <Hero />
       </section>
       <section>Key Feature section</section>
