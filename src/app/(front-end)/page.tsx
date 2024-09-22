@@ -1,16 +1,17 @@
+import Features from "@/components/front-end/home/Features";
 import Hero from "@/components/front-end/home/Hero";
-import prisma from "@/lib/prisma-client";
 
 export default async function Home() {
-  const users = await prisma.user.findMany();
-  console.log(users);
   return (
     <main className="flex flex-col gap-4 md:gap-8">
       {/* Hero section */}
       <section className="">
         <Hero />
       </section>
-      <section>Key Feature section</section>
+      {/* Key Feature section */}
+      <section>
+        <Features />
+      </section>
       <section>Book Categories Section</section>
       <section>Video Content Preview Section</section>
       <section>How It Works Section (For First-Time Users)</section>
