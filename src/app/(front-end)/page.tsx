@@ -5,13 +5,9 @@ export default async function Home() {
   return (
     <main className="flex flex-col gap-4 md:gap-8">
       {/* Hero section */}
-      <section className="">
-        <Hero />
-      </section>
+      <Hero />
       {/* Key Feature section */}
-      <section>
-        <Features />
-      </section>
+      <Features />
       <section>Book Categories Section</section>
       <section>Video Content Preview Section</section>
       <section>How It Works Section (For First-Time Users)</section>

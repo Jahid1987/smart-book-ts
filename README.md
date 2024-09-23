@@ -1,5 +1,13 @@
 # Smart Book
 
+## Main Features
+
+- Interactive text content based on each topic
+- Small exam after each topic
+- Guardian's monitoring systems
+- Teacher's comprihensive guide
+- Tution finding place
+
 ## Technologies tools will be used
 
 - TypeScript
