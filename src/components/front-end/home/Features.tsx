@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import FeatureCard from "./FeatureCard";
 
 type Book = {
   title: string;
@@ -28,34 +29,11 @@ const Features = () => {
       <SectionTitle title="Main Features" />
       {/* all Features */}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start">
-        <Card className="">
-          <CardHeader>
-            <CardTitle className="text-xl">For Students</CardTitle>
-            <CardDescription>
-              সকল বইয়ে থাকবে অধ্যায়ভিত্তিক আলোচনা। প্রতিটি বিষয় শেষ করার সাথে
-              সাথেই থাকবে ছোট MCQ পরীক্ষা। যাতে ছাত্রছাত্রীরা যাচাই করে নিতে
-              পারে তারা কি পড়েছে।
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {books.map((book) => (
-              <div key={book.link} className="flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-primary" />
-                <div className="">
-                  <p className="text-sm font-medium leading-none">
-                    {book.title}
-                    <Button variant={"link"}>
-                      <Link href={book.link}>বিস্তারিত দেখুন</Link>
-                    </Button>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </CardContent>
-          <CardFooter>
-            <Button>View All Books</Button>
-          </CardFooter>
-        </Card>
+        <FeatureCard
+          title="For Students"
+          image=""
+          features={[{ item: "This is test" }]}
+        />
         <div className="flex flex-col gap-4">
           <Card className="">
             <CardHeader>
