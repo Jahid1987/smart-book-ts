@@ -4,26 +4,14 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
 import FeatureCard from "./FeatureCard";
 
-type Book = {
-  title: string;
-  link: string;
-};
-
+// https://i.ibb.co.com/f9NS849/Firefly-a-guardian-is-controlling-his-her-students-on-reading-table-at-home-in-bangladesh-61192.jpg
 const Features = () => {
-  const books: Book[] = [
-    { title: "ICT", link: "/ict" },
-    { title: "English First Paper", link: "/english1" },
-    { title: "English Second Paper", link: "/english2" },
-    { title: "হিসাববিজ্ঞান ১ম পত্র", link: "/accounting1" },
-    { title: "হিসাববিজ্ঞান ২য় পত্র", link: "/accounting2" },
-  ];
   return (
     <section className="">
       <SectionTitle title="Main Features" />
@@ -31,38 +19,34 @@ const Features = () => {
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start">
         <FeatureCard
           title="For Students"
-          image=""
-          features={[{ item: "This is test" }]}
+          image="https://i.ibb.co.com/tcXv9LF/Firefly-smart-book-features-for-students-where-students-will-be-able-to-study-interactively-they-wi.jpg"
+          features={[{ item: "This is test" }, { item: "This is test 2" }]}
+          btn={{ name: "Get Started", link: "/featues/student" }}
         />
         <div className="flex flex-col gap-4">
-          <Card className="">
-            <CardHeader>
-              <CardTitle className="text-xl">For Teachers</CardTitle>
-              <CardDescription>
-                শিক্ষকরা এই বই এর যেকোন অংশ পড়ানোর কাজে ব্যবহার করতে পারবেন।
-                তাছাড়া শিক্ষার্থীদের Assignment দিয়ে তা ট্রেস করতে পারবেন।
-                বিষয়ভিত্তিক অথবা অধ্যায়ভিত্তিক পরীক্ষা নিয়ে শিক্ষার্থীদের
-                অগ্রগতি মূল্যায়ন করতে পারবেন।
-              </CardDescription>
-            </CardHeader>
-            {/* <CardContent></CardContent> */}
-            <CardFooter>
-              <Button>Get Started</Button>
-            </CardFooter>
-          </Card>
-          <Card className="">
-            <CardHeader>
-              <CardTitle className="text-xl">For Guardians</CardTitle>
-              <CardDescription>
-                অভিবাবকরাও তাদের সন্তানদের পড়ার অগ্রগতি মূল্যায়ন করতে পারবেন।
-                তাদের বাচ্চারা এই সাইটে কতক্ষণ পড়ছে তা ট্রেস করতে পারবেন সহজেই।
-              </CardDescription>
-            </CardHeader>
-            {/* <CardContent></CardContent> */}
-            <CardFooter>
-              <Button>Get Started</Button>
-            </CardFooter>
-          </Card>
+          <FeatureCard
+            title="For Teachers"
+            image="https://i.ibb.co.com/K9bcMWd/Firefly-a-guardian-is-controlling-his-her-students-on-reading-table-in-bangladesh-26052.jpg"
+            features={[
+              { item: "শিক্ষার্থীদের Assignment দিয়ে তা ট্রেস করতে পারবেন" },
+              {
+                item: "বিষয়ভিত্তিক অথবা অধ্যায়ভিত্তিক পরীক্ষা নিয়ে অগ্রগতি মূল্যায়ন করেতে পারবেন",
+              },
+              { item: "এই বই এর যেকোন অংশ পড়ানোর কাজে ব্যবহার করতে পারবেন" },
+            ]}
+            btn={{ name: "Get Started", link: "/featues/teacher" }}
+          />
+          <FeatureCard
+            title="For Guardians"
+            image="https://i.ibb.co.com/f9NS849/Firefly-a-guardian-is-controlling-his-her-students-on-reading-table-at-home-in-bangladesh-61192.jpg"
+            features={[
+              { item: "আপনার সন্তানদের পড়ার অগ্রগতি মূল্যায়ন করতে পারবেন" },
+              {
+                item: "আপনার সন্তানরা কতক্ষণ পড়ছে তা ট্রেস করতে পারবেন সহজেই",
+              },
+            ]}
+            btn={{ name: "Get Started", link: "/featues/teacher" }}
+          />
         </div>
         <Card className="">
           <CardHeader>
