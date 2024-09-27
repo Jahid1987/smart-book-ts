@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -18,31 +19,43 @@ const FeatureCard = ({
   title: string;
   image: string;
   features: { item: string }[];
-  btn: { name: string; link: string };
+  btn?: { name: string; link: string };
 }) => {
   return (
-    <Card className="transform transition-transform duration-300 hover:scale-105">
-      <CardHeader className="text-center">
-        <CardTitle className="text-xl md:text-2xl">{title}</CardTitle>
-        <div className="flex justify-center">
-          <Image src={image} alt={title} height={200} width={200} />
-        </div>
-      </CardHeader>
+    <Card className="relative transform transition-transform duration-300 hover:scale-105">
       <CardContent>
-        {features.map((feature) => (
-          <div key={feature.item} className="flex items-start gap-3 mb-3">
-            <span className="h-2 w-2 rounded-full bg-primary mt-[2px]" />
-            <p className="text-sm font-medium leading-none flex-1">
-              {feature.item}
-            </p>
-          </div>
-        ))}
+        <span className="flex justify-center w-full h-fit">
+          <Image
+            src={image}
+            alt={title}
+            height={400}
+            width={400}
+            className="rounded-md mt-6"
+          />
+        </span>
       </CardContent>
-      <CardFooter className="cursor-pointer">
-        <Link href={btn.link}>
-          <Button className="cursor-pointer">{btn.name}</Button>
-        </Link>
-      </CardFooter>
+      <CardHeader>
+        <CardTitle className="text-xl md:text-2xl">{title}</CardTitle>
+        <CardDescription>
+          {features.map((feature) => (
+            <span
+              key={feature.item}
+              className="flex items-start justify-start gap-3 mb-3"
+            >
+              <span className="h-2 w-2 rounded-full bg-primary mt-[2px]" />
+              <span className="leading-none flex-1">{feature.item}</span>
+            </span>
+          ))}
+        </CardDescription>
+      </CardHeader>
+
+      {btn && (
+        <CardFooter className="cursor-pointer">
+          <Link href={btn.link}>
+            <Button className="cursor-pointer">{btn.name}</Button>
+          </Link>
+        </CardFooter>
+      )}
     </Card>
   );
 };

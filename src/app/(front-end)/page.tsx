@@ -1,3 +1,4 @@
+import Books from "@/components/front-end/home/Books";
 import Features from "@/components/front-end/home/Features";
 import Hero from "@/components/front-end/home/Hero";
 
@@ -8,7 +9,8 @@ export default async function Home() {
       <Hero />
       {/* Key Feature section */}
       <Features />
-      <section>Book Categories Section</section>
+      {/* Book Categories Section */}
+      <Books />
       <section>Video Content Preview Section</section>
       <section>How It Works Section (For First-Time Users)</section>
       <section>Testimonials Section</section>
