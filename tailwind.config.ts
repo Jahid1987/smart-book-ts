@@ -55,7 +55,18 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  keyframes: {
+			'border-flow': {
+			  '0%': { width: '0%', height: '0%' },
+			  '25%': { width: '100%', height: '0%' },
+			  '50%': { width: '100%', height: '100%' },
+			  '100%': { width: '100%', height: '100%' },
+			},
+		  },
+		  animation: {
+			'border-flow': 'border-flow 1s ease forwards',
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],

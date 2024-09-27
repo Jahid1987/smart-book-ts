@@ -5,7 +5,7 @@ import FeatureCard from "./FeatureCard";
 const Features = () => {
   return (
     <section className="">
-      <SectionTitle title="Let's Explore Features" />
+      <SectionTitle title="Let's Explore Services" />
       {/* all Features */}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start">
         {/* for students */}
@@ -40,7 +40,7 @@ const Features = () => {
               item: "আগ্রহীরা চাইলে ফ্রিলান্সিংও করতে পারবে",
             },
           ]}
-          btn={{ name: "Get Started", link: "/featues/student" }}
+          btn={{ name: "Get Started", link: "/services/student" }}
         />
         {/* for Teachers and Guardians */}
         <FeatureCard
@@ -53,7 +53,7 @@ const Features = () => {
             },
             { item: "এই বই এর যেকোন অংশ পড়ানোর কাজে ব্যবহার করতে পারবেন" },
           ]}
-          btn={{ name: "Get Started", link: "/featues/teacher" }}
+          btn={{ name: "Get Started", link: "/services/teacher" }}
         />
         <FeatureCard
           title="For Guardians"
@@ -64,7 +64,7 @@ const Features = () => {
               item: "আপনার সন্তানরা কতক্ষণ পড়ছে তা ট্রেস করতে পারবেন সহজেই",
             },
           ]}
-          btn={{ name: "Get Started", link: "/featues/teacher" }}
+          btn={{ name: "Get Started", link: "/services/guardian" }}
         />
       </div>
     </section>

@@ -22,7 +22,7 @@ const FeatureCard = ({
   btn?: { name: string; link: string };
 }) => {
   return (
-    <Card className="relative transform transition-transform duration-300 hover:scale-105">
+    <Card className="relative transform transition-transform duration-300 hover:scale-[102%]">
       <CardContent>
         <span className="flex justify-center w-full h-fit">
           <Image
