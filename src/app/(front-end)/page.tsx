@@ -1,6 +1,8 @@
 import Books from "@/components/front-end/home/Books";
 import Features from "@/components/front-end/home/Features";
 import Hero from "@/components/front-end/home/Hero";
+import HoTo from "@/components/front-end/home/HoTo";
+import Tutorials from "@/components/front-end/home/Tutorials";
 
 export default async function Home() {
   return (
@@ -11,8 +13,10 @@ export default async function Home() {
       <Features />
       {/* Book Categories Section */}
       <Books />
-      <section>Video Content Preview Section</section>
-      <section>How It Works Section (For First-Time Users)</section>
+      {/* Video Content Preview Section */}
+      <Tutorials />
+      {/* How It Works Section */}
+      <HoTo />
       <section>Testimonials Section</section>
       <section>FAQ section</section>
     </main>
