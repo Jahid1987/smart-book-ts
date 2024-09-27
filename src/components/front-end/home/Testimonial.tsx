@@ -1,11 +1,11 @@
 import SectionTitle from "@/components/shared/SectionTitle";
 
-const HoTo = () => {
+const Testimonial = () => {
   return (
     <section>
-      <SectionTitle title="How Does This Book Work?" />
+      <SectionTitle title="What Do Our Users Say?" />
     </section>
   );
 };
 
-export default HoTo;
+export default Testimonial;

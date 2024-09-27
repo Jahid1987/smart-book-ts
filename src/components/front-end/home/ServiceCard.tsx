@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const FeatureCard = ({
+const ServiceCard = ({
   title,
   image,
   features,
@@ -22,7 +22,7 @@ const FeatureCard = ({
   btn?: { name: string; link: string };
 }) => {
   return (
-    <Card className="relative transform transition-transform duration-300 hover:scale-[102%]">
+    <Card className="hover:border-primary hover:text-primary group">
       <CardContent>
         <span className="flex justify-center w-full h-fit">
           <Image
@@ -35,7 +35,9 @@ const FeatureCard = ({
         </span>
       </CardContent>
       <CardHeader>
-        <CardTitle className="text-xl md:text-2xl">{title}</CardTitle>
+        <CardTitle className="text-xl md:text-2xl group-hover:text-primary mb-2">
+          {title}
+        </CardTitle>
         <CardDescription>
           {features.map((feature) => (
             <span
@@ -60,4 +62,4 @@ const FeatureCard = ({
   );
 };
 
-export default FeatureCard;
+export default ServiceCard;

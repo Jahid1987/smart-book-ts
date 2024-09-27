@@ -1,15 +1,15 @@
 import SectionTitle from "@/components/shared/SectionTitle";
-import FeatureCard from "./FeatureCard";
+import ServiceCard from "./ServiceCard";
 
 // https://i.ibb.co.com/f9NS849/Firefly-a-guardian-is-controlling-his-her-students-on-reading-table-at-home-in-bangladesh-61192.jpg
-const Features = () => {
+const Services = () => {
   return (
     <section className="">
       <SectionTitle title="Let's Explore Services" />
       {/* all Features */}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start">
         {/* for students */}
-        <FeatureCard
+        <ServiceCard
           title="For Students"
           image="https://i.ibb.co.com/tcXv9LF/Firefly-smart-book-features-for-students-where-students-will-be-able-to-study-interactively-they-wi.jpg"
           features={[
@@ -43,7 +43,7 @@ const Features = () => {
           btn={{ name: "Get Started", link: "/services/student" }}
         />
         {/* for Teachers and Guardians */}
-        <FeatureCard
+        <ServiceCard
           title="For Teachers"
           image="https://i.ibb.co.com/K9bcMWd/Firefly-a-guardian-is-controlling-his-her-students-on-reading-table-in-bangladesh-26052.jpg"
           features={[
@@ -55,7 +55,7 @@ const Features = () => {
           ]}
           btn={{ name: "Get Started", link: "/services/teacher" }}
         />
-        <FeatureCard
+        <ServiceCard
           title="For Guardians"
           image="https://i.ibb.co.com/f9NS849/Firefly-a-guardian-is-controlling-his-her-students-on-reading-table-at-home-in-bangladesh-61192.jpg"
           features={[
@@ -71,4 +71,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Services;

@@ -21,8 +21,8 @@ const BookCard = ({
 }) => {
   return (
     <div>
-      <Card className="transform hover:border-primary ">
-        <CardHeader className=" hover:text-primary">
+      <Card className="hover:border-primary hover:text-primary group">
+        <CardHeader className="group-hover:text-primary">
           <CardTitle className="flex gap-2 items-center">
             {children}
             {name}

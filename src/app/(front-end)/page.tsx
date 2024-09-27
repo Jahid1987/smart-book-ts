@@ -1,8 +1,10 @@
 import Books from "@/components/front-end/home/Books";
-import Features from "@/components/front-end/home/Features";
+import FAQ from "@/components/front-end/home/FAQ";
 import Hero from "@/components/front-end/home/Hero";
-import HoTo from "@/components/front-end/home/HoTo";
+import HowTo from "@/components/front-end/home/HowTo";
+import Testimonial from "@/components/front-end/home/Testimonial";
 import Tutorials from "@/components/front-end/home/Tutorials";
+import Services from "@/components/front-end/home/Services";
 
 export default async function Home() {
   return (
@@ -10,15 +12,17 @@ export default async function Home() {
       {/* Hero section */}
       <Hero />
       {/* Key Feature section */}
-      <Features />
+      <Services />
       {/* Book Categories Section */}
       <Books />
       {/* Video Content Preview Section */}
       <Tutorials />
       {/* How It Works Section */}
-      <HoTo />
-      <section>Testimonials Section</section>
-      <section>FAQ section</section>
+      <HowTo />
+      {/* Testimonials Section */}
+      <Testimonial />
+      {/* FAQ section */}
+      <FAQ />
     </main>
   );
 }
